@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+#root {
+  --main-color: rgb(10, 91, 184);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 40px;
+}
+
+body {
+  /* font-family: "Fustat", sans-serif; */
+
+  font-family: "Playpen Sans", cursive;
+  list-style: none;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 550px;
+  }
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* largar */
+@media (min-width: 1400px) {
+  .container {
+    width: 1360px;
+  }
+}
+
+.container .todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.container .todo-app h2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  color: #002765;
+}
+.container .todo-app h2 img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.container .todo-app .row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+}
+.container .todo-app .row input[type="text"] {
+  flex: 1;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 20px;
+}
+.container .todo-app .row button {
+  position: absolute;
+  right: 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #ff5945;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 20px 50px;
+}
+
+.container .todo-app ul {
+  padding: 0;
+}
+.container .todo-app ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  /* background: rebeccapurple; */
+  padding: 12px 8px 12px 50px;
+  border-radius: 30px;
+  /* color: white; */
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.container .todo-app ul li::before {
+  content: "";
+  position: absolute;
+  background: url(../images/pngtree-black-ring-png-image_2319174.png);
+  background-size: cover;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 23px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.container .todo-app ul li.cheched {
+  position: relative;
+  text-decoration: line-through;
+  color: #555;
+}
+.container .todo-app ul li.cheched::before {
+  content: "";
+  position: absolute;
+  background: url(../images/icone-de-tique-ronde-orange.png);
+  background-size: cover;
+  background-position: center;
+  width: 19px;
+  height: 19px;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
