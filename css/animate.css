@@ -19,8 +19,10 @@ body {
   font-family: "Playpen Sans", cursive;
   list-style: none;
   background: linear-gradient(135deg, #153677, #4e085f);
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 .container {
   padding-left: 15px;
@@ -116,6 +118,17 @@ body {
   font-size: 16px;
   padding: 20px 50px;
 }
+@media (max-width: 576px) {
+  .container .todo-app .row input[type="text"] {
+    padding: 15px;
+  }
+  .container .todo-app .row button {
+    padding: 14px 30px;
+  }
+  .container .todo-app .row {
+    padding: 0;
+  }
+}
 
 .container .todo-app ul {
   padding: 0;
@@ -124,13 +137,14 @@ body {
   list-style: none;
   margin-bottom: 10px;
   font-size: 16px;
-  /* background: rebeccapurple; */
   padding: 12px 8px 12px 50px;
   border-radius: 30px;
-  /* color: white; */
   cursor: pointer;
   position: relative;
   user-select: none;
+  overflow: auto;
+  min-width: 30px;
+  background-color: #f0f0f047;
 }
 
 .container .todo-app ul li::before {
@@ -166,8 +180,8 @@ body {
 }
 .container .todo-app ul li span {
   position: absolute;
-  right: 0;
-  top: 5px;
+  right: 17px;
+  top: 11px;
   font-size: 22px;
   border-radius: 50%;
   width: 30px;
@@ -176,7 +190,6 @@ body {
   text-align: center;
   line-height: 27px;
   color: #555;
-  transition: background 0.3s;
 }
 .container .todo-app ul li span:hover {
   background: #edeef0;
