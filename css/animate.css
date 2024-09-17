@@ -164,3 +164,20 @@ body {
   transform: translateY(-50%);
   border-radius: 50%;
 }
+.container .todo-app ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  line-height: 27px;
+  color: #555;
+  transition: background 0.3s;
+}
+.container .todo-app ul li span:hover {
+  background: #edeef0;
+}
